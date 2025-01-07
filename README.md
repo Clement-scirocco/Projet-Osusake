@@ -6,7 +6,7 @@ Ce projet a pour but de développer un site web pour un restaurant et un bar, av
 
 - **Clément Allard** : Développement FRONT du site pour le restaurant
 - **Jaoued Boulbayem** : Développement BACK du site pour le bar
-- **Tom Verdhilan** : Mise en place du réseau, serveur WEB & BDD, modélisation et Dashboard
+- **Tom Verdilhan** : Mise en place du réseau, serveur WEB & BDD, modélisation et Dashboard
 
 ## Tâches par membre
 
