@@ -1,0 +1,58 @@
+
+1. Faciliter l'expérience utilisateur
+   1.1 Interface utilisateur intuitive (Refine)
+       - L'interface détaille davantage l'exigence principale sur l'expérience utilisateur.
+   1.2 Optimisation des commandes (Verify)
+       - Les commandes doivent être testées pour s'assurer qu'elles sont correctement transmises.
+
+2. Assurer la fiabilité et la sécurité
+   2.1 Sécurisation des connexions réseau (DeriveReqt)
+       - Dérivée des contraintes réglementaires sur la protection des données (ex. RGPD).
+   2.2 Gestion des permissions (Verify)
+       - Les permissions doivent être testées pour garantir un accès sécurisé.
+
+3. Conception de l'infrastructure réseau
+   3.1 Configuration du routeur et du switch (Refine)
+       - Cette exigence précise la configuration réseau nécessaire pour l'infrastructure.
+   3.2 Point d'accès Wi-Fi (Verify)
+       - La connectivité Wi-Fi doit être validée par des tests pratiques.
+
+4. Serveur Web et Base de Données
+   4.1 Installation d'un serveur LAMP (Refine)
+       - Cette sous-exigence spécifie comment l'application sera hébergée.
+   4.2 Base de données sécurisée (Verify)
+       - La sécurité de la base de données doit être testée pour protéger les informations sensibles.
+
+5. Développement de l'application
+   5.1 Développement Frontend (Verify)
+       - Les tests utilisateur vérifieront l'ergonomie et l'affichage de l'interface.
+   5.2 Développement Backend (Refine)
+       - Cette sous-exigence précise la gestion des commandes et la logique métier.
+   5.3 Dashboard d'administration (Verify)
+       - Le tableau de bord doit être testé pour vérifier qu'il permet les modifications prévues.
+
+6. Respect des contraintes financières
+   - Aucune sous-exigence spécifique.
+
+7. Respect des contraintes de qualité
+   - Aucune sous-exigence spécifique.
+
+8. Tests et validations
+   8.1 Tests de performance (Verify)
+       - Les performances doivent être validées par des simulations de charge.
+   8.2 Tests de sécurité (Verify)
+       - Les vulnérabilités doivent être identifiées via des tests d'intrusion.
+   8.3 Tests de convivialité (Refine)
+       - Cette sous-exigence précise comment recueillir des retours d'expérience pour améliorer l'interface.
+
+9. Gestion des sauvegardes
+   9.1 Automatisation des sauvegardes (DeriveReqt)
+       - Dérivé des besoins en continuité de service et protection des données.
+   9.2 Procédure de restauration (Verify)
+       - Les étapes de restauration doivent être validées par des tests pratiques.
+
+10. Surveillance et maintenance
+   10.1 Surveillance des ressources serveur (Verify)
+       - Les outils de monitoring doivent être testés pour assurer leur bon fonctionnement.
+   10.2 Documentation des mises à jour (Refine)
+       - Cette sous-exigence précise les informations nécessaires pour mettre à jour le système.
