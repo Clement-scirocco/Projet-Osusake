@@ -48,6 +48,4 @@ Ce projet a pour but de développer un site web pour un restaurant et un bar, av
 
 ## Installation
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/projet-restaurant-bar.git
+
