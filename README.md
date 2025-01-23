@@ -29,7 +29,7 @@ Ce projet a pour but de développer un site web pour un restaurant et un bar, av
 - **Tests d’intégration** : Vérification de l'intégration entre le frontend et le backend.
 - **Documentation** : Rédaction du cahier de recette pour le backend.
 
-### Tom Verdhilan - Mise en place du réseau, serveur WEB & BDD, modélisation et Dashboard
+### Tom Verdilhan - Mise en place du réseau, serveur WEB & BDD, modélisation et Dashboard
 
 - **Configuration du réseau local** : Installation et configuration des équipements réseau pour interconnecter les dispositifs.
 - **Installation du serveur WEB (LAMP)** : Configuration sécurisée du serveur pour héberger le site et la base de données.
