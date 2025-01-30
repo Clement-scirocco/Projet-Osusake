@@ -1,0 +1,31 @@
+.ticket-commande {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: black;
+    padding: 15px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+}
+
+.ticket-commande h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ticket-commande ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ticket-commande li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-commande li:last-child {
+    border-bottom: none;
+}
