@@ -1,0 +1,231 @@
+css :
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('Images/fondecrandashboard.png');
+}
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 50px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar ul li {
+    margin: 30px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background: #000000;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.sidebar ul li a:hover {
+    background: #555;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+/* Bouton accueil*/
+.accueil {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    background-color: #a30000;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.home-btn {
+    width: 45px;
+    height: 45px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.info-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.info-btn:hover {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 0px; /* largeur sidebar */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 commandes par ligne */
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+}
+
+.commande-container {
+    background-color: #ffffff;
+    width: 400px;
+    height: 350px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.table-number {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.order-details {
+    list-style-type: none;
+    margin-top: 35px;
+    font-size: 15px;
+    color: #000;
+    padding: 5px;
+}
+
+.actions {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    right: 10px;
+    display: flex;
+    gap: 4px;
+}
+
+.actions button {
+    flex: 1;
+    font-size: 18px;
+    padding: 6px 3px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.ticket { background-color: #3498db; }
+.reduction { background-color: #2ecc71; }
+.paiement { background-color: #f39c12; }
+.paye.unpaid { background-color: #e74c3c; }
+.paye.paid { background-color: #28a745; }
+.close { background-color: #000000; }
+
+.actions button:hover {
+    opacity: 0.8;
+}
+
+
+html :
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar - Commandes</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="accueil">
+        <a href="Index.html">
+            <img src="Images/logoaccueil.png" alt="Accueil" class="home-btn">
+        </a>
+    </div>
+    <ul>
+        <li><a href="Bar.html"><img src="Images/Logocommande.svg" alt="Commande" class="menu-icon">Commande</a></li>
+        <li><a href="#"><img src="Images/LogoCarte.svg" class="menu-icon">Carte</a></li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="commande-container">
+        <div class="table-number">1</div>
+        <ul class="order-details">
+            <li>Produit A</li>
+            <li>Produit B</li>
+        </ul>
+        <div class="actions">
+            <button class="ticket">Ticket</button>
+            <button class="reduction">Réduction</button>
+            <button class="paiement">Paiement</button>
+            <button class="paye unpaid">Payé</button>
+            <button class="close">❌</button>
+        </div>
+    </div>
+</div>
+
+<script src="scriptbar.js"></script>
+
+</body>
+</html>
