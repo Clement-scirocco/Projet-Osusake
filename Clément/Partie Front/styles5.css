@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('Images/fondecrandashboard.png');
+}
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 50px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar ul li {
+    margin: 30px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background: #000000;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.sidebar ul li a:hover {
+    background: #555;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+/* Bouton accueil*/
+.accueil {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    background-color: #a30000;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.home-btn {
+    width: 45px;
+    height: 45px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.info-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.info-btn:hover {
+    background-color: #555;
+}

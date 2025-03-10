@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Restaurant</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <div class="accueil">
+                <a href="Index.html">
+                    <img src="Images/logoaccueil.png" alt="Icône" class="home-btn">
+                </a>
+            </div>
+            <li><a href="Plats.html"><img src="Images/logonouilles.png" alt="Plats" class="menu-icon"> Plats</a></li>
+            <li><a href="Boissons.html"><img src="Images/logoboisson.png" alt="Boissons" class="menu-icon"> Boissons</a></li>
+            <li><a href="Desserts.html"><img src="Images/logodessert.png" alt="Desserts" class="menu-icon"> Desserts</a></li>
+        </ul>
+    </div>
+    <div class="menu-plats">
+        <h2>Desserts</h2>
+        <div class="plats-list">
+            <div class="plat-item">
+                <img src="Images/perlescoco.png" alt="Perles de Coco" class="plat-img">
+                <h4>Perles de Coco</h4>
+                <button class="ajouter-panier" data-prix="4" onclick="ajouterAuPanier('Perles de Coco', 4)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat1')">Information</button>
+                <div class="details-overlay" id="plat1-details">
+                    <button class="close-btn" onclick="fermerDetails('plat1')">×</button>
+                    <p>- Boules de farine de riz fourrées aux haricots rouges et noix de coco -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/flanthévert.png" alt="Flan au Thé Vert" class="plat-img">
+                <h4>Flan au Thé Vert</h4>
+                <button class="ajouter-panier" data-prix="5" onclick="ajouterAuPanier('Flan au Thé Vert', 5)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat2')">Information</button>
+                <div class="details-overlay" id="plat2-details">
+                    <button class="close-btn" onclick="fermerDetails('plat2')">×</button>
+                    <p>– Flan parfumé au thé vert, une touche sucrée et légère -</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="commande-details">
+        <button onclick="validerCommande()" class="valider-btn">Valider la commande</button>
+        <h3>Commande</h3>
+        <p>Table sélectionnée : <span id="table-numero">Aucune</span></p>
+        <ul id="commande-liste">
+            <li>Aucune commande</li>
+        </ul>
+        <p id="total-prix">Total : 0€</p>
+    </div>
+
+    <script src="scriptmenu.js"></script>
+</body>
+</html>
