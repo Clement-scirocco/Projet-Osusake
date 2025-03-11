@@ -52,12 +52,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["edit_type"]) && isset(
     $description = $_POST["edit_description"];
     $column_id = ($table == "Plats") ? "plat_id" : (($table == "Boissons") ? "boisson_id" : "dessert_id");
 
-    $stmt = $pdo->prepare("UPDATE $table SET nom = ?, prix = ?, description = ? WHERE $column_id = ?");
-    $stmt->execute([$nom, $prix, $description, $id]);
+    // Vérification si une nouvelle image a été envoyée
+    if (isset($_FILES["edit_image"]) && $_FILES["edit_image"]["error"] === 0) {
+        $imageType = mime_content_type($_FILES["edit_image"]["tmp_name"]);
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+
+        if (in_array($imageType, $allowedTypes)) {
+            $imageData = file_get_contents($_FILES["edit_image"]["tmp_name"]);
+            // Mise à jour avec une nouvelle image
+            $stmt = $pdo->prepare("UPDATE $table SET nom = ?, prix = ?, description = ?, image = ? WHERE $column_id = ?");
+            $stmt->execute([$nom, $prix, $description, $imageData, $id]);
+        }
+    } else {
+        // Mise à jour sans changer l'image
+        $stmt = $pdo->prepare("UPDATE $table SET nom = ?, prix = ?, description = ? WHERE $column_id = ?");
+        $stmt->execute([$nom, $prix, $description, $id]);
+    }
 
     header("Location: ".$_SERVER['PHP_SELF']);
     exit();
 }
+
+
 
 // Récupération des données
 $plats = $pdo->query("SELECT * FROM Plats")->fetchAll();
@@ -185,33 +201,38 @@ $desserts = $pdo->query("SELECT * FROM Desserts")->fetchAll();
 
         function openEditModal(type, id, nom, prix, description) {
         document.getElementById("modal-container").innerHTML = `
-            <div class="modal fade show" style="display:block;">
-                <div class="modal-dialog">
-                    <div class="modal-content p-3">
-                        <h4>Modifier</h4>
-                        <form method="POST">
-                            <input type="hidden" name="edit_type" value="${type}">
-                            <input type="hidden" name="edit_id" value="${id}">
-                            <div class="mb-2">
-                                <label class="form-label">Nom</label>
-                                <input type="text" name="edit_nom" value="${nom}" class="form-control">
-                            </div>
-                            <div class="mb-2">
-                                <label class="form-label">Prix (€)</label>
-                                <input type="number" step="0.01" name="edit_prix" value="${prix}" class="form-control">
-                            </div>
-                            <div class="mb-2">
-                                <label class="form-label">Description</label>
-                                <textarea name="edit_description" class="form-control">${description}</textarea>
-                            </div>
-                            <button type="submit" class="btn btn-warning">Sauvegarder</button>
-                            <button type="button" class="btn btn-secondary" onclick="closeModal()">Annuler</button>
-                        </form>
-                    </div>
+        <div class="modal fade show" style="display:block;">
+            <div class="modal-dialog">
+                <div class="modal-content p-3">
+                    <h4>Modifier</h4>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="edit_type" value="${type}">
+                        <input type="hidden" name="edit_id" value="${id}">
+                        <div class="mb-2">
+                            <label class="form-label">Nom</label>
+                            <input type="text" name="edit_nom" value="${nom}" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Prix (€)</label>
+                            <input type="number" step="0.01" name="edit_prix" value="${prix}" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Description</label>
+                            <textarea name="edit_description" class="form-control">${description}</textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Changer l'image (facultatif)</label>
+                            <input type="file" name="edit_image" class="form-control" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn btn-warning">Sauvegarder</button>
+                        <button type="button" class="btn btn-secondary" onclick="closeModal()">Annuler</button>
+                    </form>
                 </div>
             </div>
-        `;
-    }
+        </div>
+    `;
+}
+
 
     function closeModal() { 
         document.getElementById("modal-container").innerHTML = ""; 
