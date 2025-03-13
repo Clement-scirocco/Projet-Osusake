@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Connexion</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Identifiant" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <script src="idbar.js"></script>
+</body>
+</html>
