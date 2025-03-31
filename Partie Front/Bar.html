@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bar - Commandes</title>
+    <link rel="stylesheet" href="Css/styles5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="accueil">
+        <a href="Index.html">
+            <img src="Images/logoaccueil.png" class="home-btn">
+        </a>
+    </div>
+    <ul>
+        <li><a href="Bar.html"><img src="Images/Logocommande.svg" class="menu-icon">Commande</a></li>
+        <li><a href="Identificationcarte.html"><img src="Images/LogoCarte.svg" class="menu-icon">Carte</a></li>
+    </ul>
+</div>
+
+<!-- Popup pour la réduction -->
+<div id="reduction-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Appliquer une réduction</h2>
+        <label for="reduction-input">Montant ou % :</label>
+        <input type="text" id="reduction-input" placeholder="Ex: 10 ou 10%">
+        <button id="apply-reduction">Appliquer</button>
+    </div>
+</div>
+
+<!-- Popup pour générer le ticket -->
+<div id="ticket-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Générer un Ticket</h2>
+        <label for="emailClient">Email du client :</label>
+        <input type="email" id="emailClient" placeholder="Entrez l'email du client" required>
+        <br>
+        <button id="generate-detailed-ticket">Ticket détaillé</button>
+        <button id="generate-simple-ticket">Ticket simplifié</button>
+    </div>
+</div>
+
+<!-- Popup pour libérer/archiver la commande -->
+<div id="liberation-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Confirmer la libération de la commande</h2>
+        <p>Voulez-vous vraiment archiver cette commande ?</p>
+        <button id="confirm-liberation">Oui, libérer</button>
+        <button id="cancel-liberation">Annuler</button>
+    </div>
+</div>
+
+<div class="main-content">
+</div>
+
+<script src="Js/scriptbar.js"></script> <!-- Inclusion du fichier JS externe -->
+
+</body>
+</html>

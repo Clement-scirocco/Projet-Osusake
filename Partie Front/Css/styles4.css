@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('../Images/fondecrandashboard.png'); 
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto; /* Permet le défilement */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cacher la barre de défilement mais permettre le scroll */
+/* Google Chrome, Safari, Microsoft Edge (WebKit) */
+body::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement */
+}
+
+/* Mozilla Firefox */
+html {
+    scrollbar-width: none; /* Masque la barre de défilement */
+}
+
+/* Internet Explorer 11 */
+body {
+    -ms-overflow-style: none; /* Masque la barre de défilement */
+}
+
+.container { /*Balise pour comptabilité navigateur */
+    display: -webkit-flex;  /* Safari ancien */
+    display: -moz-flex;     /* Firefox ancien */
+    display: -ms-flexbox;   /* Internet Explorer 10 et 11 */
+    display: flex;          /* Pour les navigateurs modernes (Chrome, Firefox, Edge, Safari récent) */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center;    /* Centrer les éléments verticalement */
+    height: 100vh;           /* Utilisation de toute la hauteur de la fenêtre */
+    display: -ms-grid;     /* Pour Internet Explorer 10 et 11 */
+    display: grid;         /* Pour les navigateurs modernes (Chrome, Firefox, Safari, Edge récent) */
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */
+    gap: 20px; /* Espacement entre les éléments de la grille */
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 320px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d41b1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #780000;
+}
+
+#message {
+    margin-top: 15px;
+    color: red;
+}
+
+.accueil {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    background-color: #000000;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.home-btn {
+    width: 45px;
+    height: 45px;
+}

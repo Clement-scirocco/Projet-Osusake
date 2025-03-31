@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Restaurant</title>
+    <link rel="stylesheet" href="Css/styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <div class="accueil">
+                <a href="Index.html">
+                    <img src="Images/logoaccueil.png" alt="Icône" class="home-btn">
+                </a>
+            </div>
+            <li><a href="Plats.html"><img src="Images/logonouilles.png" alt="Plats" class="menu-icon"> Plats</a></li>
+            <li><a href="Boissons.html"><img src="Images/logoboisson.png" alt="Boissons" class="menu-icon"> Boissons</a></li>
+            <li><a href="Desserts.html"><img src="Images/logodessert.png" alt="Desserts" class="menu-icon"> Desserts</a></li>
+        </ul>
+    </div>
+    <div class="menu-plats">
+        <h2>Apéritifs</h2>
+        <div class="plats-list">
+            <div class="plat-item">
+                <img src="Images/nempoulet.png" alt="Nems aux Poulet" class="plat-img">
+                <h4>Nems aux Poulet</h4>
+                <button class="ajouter-panier" data-prix=""5 onclick="ajouterAuPanier('Nems aux Poulet', 5)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat1')">Information</button>
+                <div class="details-overlay" id="plat1-details">
+                    <button class="close-btn" onclick="fermerDetails('plat1')">×</button>
+                    <p>- Petits rouleaux frits avec poulet, vermicelles, et légumes -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/raviolisvapeur.png" alt="Raviolis Vapeur" class="plat-img">
+                <h4>Raviolis Vapeur</h4>
+                <button class="ajouter-panier" data-prix="6" onclick="ajouterAuPanier('Raviolis Vapeur', 6)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat2')">Information</button>
+                <div class="details-overlay" id="plat2-details">
+                    <button class="close-btn" onclick="fermerDetails('plat2')">×</button>
+                    <p>- Raviolis farcis au porc et crevettes, cuits à la vapeur -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/saladepapaye.png" alt="Salade de Papaye" class="plat-img">
+                <h4>Salade de Papaye</h4>
+                <button class="ajouter-panier" data-prix="7" onclick="ajouterAuPanier('Salade de Papaye', 7)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat3')">Information</button>
+                <div class="details-overlay" id="plat3-details">
+                    <button class="close-btn" onclick="fermerDetails('plat3')">×</button>
+                    <p>- Salade fraîche avec papaye verte, carottes, cacahuètes, et sauce maison -</p>
+                </div>
+            </div>
+        </div>
+        <h2>Soupes</h2>
+        <div class="plats-list">
+            <div class="plat-item">
+                <img src="Images/phoboeuf.png" alt="Pho au Boeuf" class="plat-img">
+                <h4>Pho au Boeuf</h4>
+                <button class="ajouter-panier" data-prix="10" onclick="ajouterAuPanier('Pho au Boeuf', 10)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat4')">Information</button>
+                <div class="details-overlay" id="plat4-details">
+                    <button class="close-btn" onclick="fermerDetails('plat4')">×</button>
+                    <p>- Bouillon parfumé avec nouilles de riz, bœuf finement tranché, herbes fraîches -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/phopoulet.png" alt="Pho au Poulet" class="plat-img">
+                <h4>Pho au Poulet</h4>
+                <button class="ajouter-panier" data-prix="9" onclick="ajouterAuPanier('Pho au Poulet', 9)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat5')">Information</button>
+                <div class="details-overlay" id="plat5-details">
+                    <button class="close-btn" onclick="fermerDetails('plat5')">×</button>
+                    <p>- Soupe traditionnelle au poulet et nouilles de riz -</p>
+                </div>
+            </div>
+        </div>
+        <h2>Plats de riz</h2>
+        <div class="plats-list">
+            <div class="plat-item">
+                <img src="Images/rizcantonais.png" alt="Riz Cantonais" class="plat-img">
+                <h4>Riz Cantonais</h4>
+                <button class="ajouter-panier" data-prix="8" onclick="ajouterAuPanier('Riz Cantonais', 8)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat6')">Information</button>
+                <div class="details-overlay" id="plat6-details">
+                    <button class="close-btn" onclick="fermerDetails('plat6')">×</button>
+                    <p>- Riz sauté avec porc, crevettes, et légumes -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/pouletcurry.png" alt="Pho au Poulet" class="plat-img">
+                <h4>Poulet au Curry</h4>
+                <button class="ajouter-panier" data-prix="9" onclick="ajouterAuPanier('Pho au Poulet', 9)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat7')">Information</button>
+                <div class="details-overlay" id="plat7-details">
+                    <button class="close-btn" onclick="fermerDetails('plat7')">×</button>
+                    <p>- Poulet mijoté dans une sauce au curry et lait de coco, servi avec riz -</p>
+                </div>
+            </div>
+        </div>
+        <h2>Nouilles</h2>
+        <div class="plats-list">
+            <div class="plat-item">
+                <img src="Images/nouilleslegumes.webp" alt="Nouilles Légumes" class="plat-img">
+                <h4>Nouilles Légumes</h4>
+                <button class="ajouter-panier" data-prix="8" onclick="ajouterAuPanier('Nouilles Canard', 8)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat8')">Information</button>
+                <div class="details-overlay" id="plat8-details">
+                    <button class="close-btn" onclick="fermerDetails('plat8')">×</button>
+                    <p>- Nouilles de riz sautées avec assortiment de légumes frais -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillesboeuf.png" alt="Nouilles Bœuf" class="plat-img">
+                <h4>Nouilles Bœuf </h4>
+                <button class="ajouter-panier" data-prix="13" onclick="ajouterAuPanier('Nouilles Bœuf', 13)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat9')">Information</button>
+                <div class="details-overlay" id="plat9-details">
+                    <button class="close-btn" onclick="fermerDetails('plat9')">×</button>
+                    <p>– Nouilles de riz sautées avec du bœuf sauté -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillescanard.png" alt="Nouilles Canard" class="plat-img">
+                <h4>Nouilles Canard </h4>
+                <button class="ajouter-panier" data-prix="14" onclick="ajouterAuPanier('Nouilles Canard', 14)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat10')">Information</button>
+                <div class="details-overlay" id="plat10-details">
+                    <button class="close-btn" onclick="fermerDetails('plat10')">×</button>
+                    <p>– Nouilles de riz sautées avec du canard sauté -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillesporc.webp" alt="Nouilles Porc" class="plat-img">
+                <h4>Nouilles Porc </h4>
+                <button class="ajouter-panier" data-prix="11" onclick="ajouterAuPanier('Nouilles Porc', 11)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat11')">Information</button>
+                <div class="details-overlay" id="plat11-details">
+                    <button class="close-btn" onclick="fermerDetails('plat11')">×</button>
+                    <p>– Nouilles de riz sautées avec du porc sauté -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillestofu.webp" alt="Nouilles Tofu" class="plat-img">
+                <h4>Nouilles Tofu </h4>
+                <button class="ajouter-panier" data-prix="9" onclick="ajouterAuPanier('Nouilles Tofu', 9)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat12')">Information</button>
+                <div class="details-overlay" id="plat12-details">
+                    <button class="close-btn" onclick="fermerDetails('plat12')">×</button>
+                    <p>– Nouilles de riz sautées avec du tofu sauté -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillesoeuf.jpg" alt="Nouilles Œufs" class="plat-img">
+                <h4>Nouilles Œufs </h4>
+                <button class="ajouter-panier" data-prix="9" onclick="ajouterAuPanier('Nouilles Œufs',9)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat13')">Information</button>
+                <div class="details-overlay" id="plat13-details">
+                    <button class="close-btn" onclick="fermerDetails('plat13')">×</button>
+                    <p>– Nouilles de riz sautées aux oeufs -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillescrevettes.webp" alt="Nouilles Crevettes" class="plat-img">
+                <h4>Nouilles Crevettes</h4>
+                <button class="ajouter-panier" data-prix="12" onclick="ajouterAuPanier('Nouilles Crevettes', 12)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat14')">Information</button>
+                <div class="details-overlay" id="plat14-details">
+                    <button class="close-btn" onclick="fermerDetails('plat14')">×</button>
+                    <p>– Nouilles de riz sautées avec des crevettes sauce piquante -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillespoulet.png" alt="Nouilles Poulet" class="plat-img">
+                <h4>Nouilles Poulet </h4>
+                <button class="ajouter-panier" data-prix="10" onclick="ajouterAuPanier('Nouilles Poulet', 10)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat15')">Information</button>
+                <div class="details-overlay" id="plat15-details">
+                    <button class="close-btn" onclick="fermerDetails('plat15')">×</button>
+                    <p>– Nouilles de riz sautées avec du poulet sauté -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/nouillessaumon.png" alt="Nouilles Saumon" class="plat-img">
+                <h4>Nouilles Saumon </h4>
+                <button class="ajouter-panier" data-prix="12" onclick="ajouterAuPanier('Nouilles Saumon', 12)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat16')">Information</button>
+                <div class="details-overlay" id="plat16-details">
+                    <button class="close-btn" onclick="fermerDetails('plat16')">×</button>
+                    <p>– Nouilles de riz sautées avec du poulet sauté -</p>
+                </div>
+            </div>
+        </div>
+        <h2>Bo Bun</h2>
+        <div class="plats-list">
+            <div class="plat-item">
+                <img src="Images/bobunvegetarien.png" alt="Végétarien" class="plat-img">
+                <h4>Végétarien</h4>
+                <button class="ajouter-panier" data-prix="15" onclick="ajouterAuPanier('Végétarien', 15)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat17')">Information</button>
+                <div class="details-overlay" id="plat17-details">
+                    <button class="close-btn" onclick="fermerDetails('plat17')">×</button>
+                    <p>- Vermicelles de riz avec légumes croquants, cacahuètes, et herbes -</p>
+                </div>
+            </div>
+        </div>
+        <h2>Plats Végétarien</h2>
+        <div class="plats-list">
+            <div class="plat-item">
+                <img src="Images/tofusautégingembre.png" alt="Tofu Sauté au Gingembre" class="plat-img">
+                <h4>Tofu Sauté au Gingembre</h4>
+                <button class="ajouter-panier" data-prix="9" onclick="ajouterAuPanier('Tofu Sauté au Gingembre', 9)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat18')">Information</button>
+                <div class="details-overlay" id="plat18-details">
+                    <button class="close-btn" onclick="fermerDetails('plat18')">×</button>
+                    <p>- Tofu sauté avec gingembre, légumes, et sauce soja -</p>
+                </div>
+            </div>
+            <div class="plat-item">
+                <img src="Images/rizlegumes.png" alt="Riz au Légumes" class="plat-img">
+                <h4>Riz au Légumes</h4>
+                <button class="ajouter-panier" data-prix="7" onclick="ajouterAuPanier('Riz au Légumes', 7)">Ajouter au Panier</button>
+                <button class="info-btn" onclick="afficherDetails('plat19')">Information</button>
+                <div class="details-overlay" id="plat18-details">
+                    <button class="close-btn" onclick="fermerDetails('plat19')">×</button>
+                    <p>- Riz sauté aux légumes de saison et sauce légère -</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="commande-details">
+        <button onclick="validerCommande()" class="valider-btn">Valider la commande</button>
+        <h3>Commande</h3>
+        <p>Table sélectionnée : <span id="table-numero">Aucune</span></p>
+        <ul id="commande-liste">
+            <li>Aucune commande</li>
+        </ul>
+        <p id="total-prix">Total : 0€</p>
+    </div>
+
+    <script src="Js/scriptmenu.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Appliquer le zoom sans toucher au scroll
+            if (window.innerWidth < 1600 && window.innerWidth > 768) {
+                document.body.style.zoom = "67%"; 
+            } else {
+                document.body.style.zoom = "100%"; 
+            }
+        });
+    </script>
+</body>
+</html>
+

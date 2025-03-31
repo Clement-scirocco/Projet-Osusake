@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../Images/fondecrandashboard.png');
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto; /* Permet le défilement */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cacher la barre de défilement mais permettre le scroll */
+/* Google Chrome, Safari, Microsoft Edge (WebKit) */
+body::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement */
+}
+
+/* Mozilla Firefox */
+html {
+    scrollbar-width: none; /* Masque la barre de défilement */
+}
+
+/* Internet Explorer 11 */
+body {
+    -ms-overflow-style: none; /* Masque la barre de défilement */
+}
+
+.container { /*Balise pour comptabilité navigateur */
+    display: -webkit-flex;  /* Safari ancien */
+    display: -moz-flex;     /* Firefox ancien */
+    display: -ms-flexbox;   /* Internet Explorer 10 et 11 */
+    display: flex;          /* Pour les navigateurs modernes (Chrome, Firefox, Edge, Safari récent) */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center;    /* Centrer les éléments verticalement */
+    height: 100vh;           /* Utilisation de toute la hauteur de la fenêtre */
+    display: -ms-grid;     /* Pour Internet Explorer 10 et 11 */
+    display: grid;         /* Pour les navigateurs modernes (Chrome, Firefox, Safari, Edge récent) */
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */
+    gap: 20px; /* Espacement entre les éléments de la grille */
+}
+
+.sidebar {
+    width: 210px;
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 50px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar ul li {
+    margin: 30px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background: #000000;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.sidebar ul li a:hover {
+    background: #555;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+/* Bouton accueil*/
+.accueil {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    background-color: #a30000;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.home-btn {
+    width: 45px;
+    height: 45px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.info-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.info-btn:hover {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 20px;
+}
+
+.commande-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    position: relative;
+    height: 400px;
+}
+
+.table-number {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.order-details {
+    margin-top: 40px;
+    overflow-y: auto;
+    height: 180px;
+    padding: 5px;
+}
+
+.actions {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    right: 5px;
+    display: flex;
+    gap: 4px;
+}
+
+.actions button {
+    flex: 1;
+    font-size: px;
+    padding: 5px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.ticket { background-color: #3498db; }
+.reduction { background-color: #2ecc71; }
+.paiement { background-color: #f39c12; }
+.paye.unpaid { background-color: #e74c3c; }
+.paye.paid { background-color: #28a745; }
+.close { background-color: #2c2c2c; }
+
+.modal {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Fond assombri derrière la modale */
+.modal::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+/* Style du bouton fermer */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+}
+
+/* Style du champ de saisie */
+#reduction-input {
+    width: 80%;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+/* Style du bouton Appliquer */
+#apply-reduction {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#apply-reduction:hover {
+    background-color: #218838;
+}
+
+.total-prix {
+    position: absolute;
+    bottom: 50px; /* juste au-dessus des boutons */
+    left: 10px;
+    right: 10px;
+    padding-top: 5px;
+    border-top: 2px solid #ddd; /* la petite barre */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}

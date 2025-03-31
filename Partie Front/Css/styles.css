@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../Images/Fondecranaccueilv2.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto; /* Permet le défilement */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cacher la barre de défilement mais permettre le scroll */
+/* Google Chrome, Safari, Microsoft Edge (WebKit) */
+body::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement */
+}
+
+/* Mozilla Firefox */
+html {
+    scrollbar-width: none; /* Masque la barre de défilement */
+}
+
+/* Internet Explorer 11 */
+body {
+    -ms-overflow-style: none; /* Masque la barre de défilement */
+}
+
+.container { /*Balise pour comptabilité navigateur */
+    display: -webkit-flex;  /* Safari ancien */
+    display: -moz-flex;     /* Firefox ancien */
+    display: -ms-flexbox;   /* Internet Explorer 10 et 11 */
+    display: flex;          /* Pour les navigateurs modernes (Chrome, Firefox, Edge, Safari récent) */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center;    /* Centrer les éléments verticalement */
+    height: 100vh;           /* Utilisation de toute la hauteur de la fenêtre */
+    display: -ms-grid;     /* Pour Internet Explorer 10 et 11 */
+    display: grid;         /* Pour les navigateurs modernes (Chrome, Firefox, Safari, Edge récent) */
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */
+    gap: 20px; /* Espacement entre les éléments de la grille */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.8);
+}
+
+header h1 {
+    font-size: 30px;
+    color: #ff9d3b; 
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;    
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
+    width: 100%;
+    max-width: 800px;
+}
+
+
+.titre h2 {
+    font-size: 30px;
+    color: #ff9d3b;
+    margin-bottom: 20px;
+}
+
+.titre p {
+    font-size: 20px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.bouton {
+    display: inline-block;
+    background-color: #730000;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.bouton:hover {
+    background-color: #a9292d;
+}
+
+.admin {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 70px;
+    height: 70px;
+    background-color: #000000;
+    border-bottom-left-radius: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.admin-btn { 
+    width: 45px;
+    height: 50px;
+}

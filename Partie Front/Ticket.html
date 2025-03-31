@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoyer le Ticket par Email</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <link rel="stylesheet" href="Css/styles7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+<body>
+    <h2>Envoyer le Ticket par Email</h2>
+
+    <div id="ticket-content">
+        <h3>Ticket de Commande</h3>
+        <p id="table-numero">Table : </p>
+        <ul id="ticket-details"></ul>
+        <p id="reduction-info" style="color: red; font-weight: bold;"></p> <!-- Ajout de la réduction -->
+        <p id="total-ticket">Total : 0€</p>
+    </div>
+
+    <label for="email">Adresse Email :</label>
+    <input type="email" id="email" placeholder="Entrez l'adresse email">
+    <button id="send-email">Envoyer par Email</button>
+
+    <script src="Js/scriptticket.js"></script>
+</body>
+</html>

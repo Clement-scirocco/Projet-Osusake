@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="Css/styles4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="accueil">
+            <a href="Index.html">
+                <img src="Images/logoaccueil.png" class="home-btn">
+            </a>
+    </div>    
+    <div class="login-container">
+        <h2>Connexion</h2>                                                                                                                                                                                                                                 /
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Identifiant" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <script src="Js/identificationcarte.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Appliquer le zoom sans toucher au scroll
+            if (window.innerWidth < 1600 && window.innerWidth > 768) {
+                document.body.style.zoom = "67%"; 
+            } else {
+                document.body.style.zoom = "100%"; 
+            }
+        });
+    </script>
+</body>
+</html
