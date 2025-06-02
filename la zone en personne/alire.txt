@@ -1,0 +1,2 @@
+1) Alors dans la BDD va falloir ajouter dans la table ADDITION la colonne reduction_p parce qu'il fou un bordel le module de réduction 
+2)dossier nouveauté : Historique des commandes que tu peux ajouter tout est à jour rien à modifier sur la bdd 
